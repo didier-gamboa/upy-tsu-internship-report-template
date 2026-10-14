@@ -1,0 +1,59 @@
+\documentclass{upy-report}
+
+% Archivo de referencias bibliograficas
+\addbibresource{refs.bib}
+
+%load any additional packages
+
+\title{A Very Relevant and\\ Disruptive Project}
+
+\author{Gonzalo G. Peraza Mues}
+\date{\today}
+\supinternal{Awesome Prof}
+\supexternal{Awesome Sup}
+\major{Técnico Superior Universitario en Ciencia de Datos}
+%\titlehead{A Report submitted for the degree of Data Engineering}
+\publishers{Universidad Politécnica de Yucatán}
+
+%end the preamble and start the document
+\begin{document}
+
+% \maketitle                  % create a title page from the preamble info
+\include{titlepages}
+\frontmatter
+\pagestyle{empty}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\include{content/acknowledgements}  % include an acknowledgements.tex file
+\include{content/abstract}          % include the abstract
+
+\mainmatter
+\pagestyle{headings}
+
+%now include the files of latex for each of the chapters etc
+\include{content/chapter1}
+\include{content/chapter2}
+\include{content/chapter3}
+\include{content/chapter4}
+\include{content/conclusions}
+
+
+% Referencias APA 7
+\printbibliography[
+    heading=bibintoc,
+    title={Referencias}
+]
+
+%Apendices
+\appendix
+\include{content/appendix1}
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
